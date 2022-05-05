@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/style.css"/>
+  
+</head>
+<body onload="slider()">
+  <div class="topnav">
+    <div class="logo">
+      <img src="Img\mnsp_icon.png"/>
+    </div>
+<!-- ==== Menu bar ====== -->
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#news">About us</a></li>
+      <li><a href="#contact">Services</a></li>
+      <li><a href="#about">Sareers</a></li>
+      <li><a href="#about">Contact Us</a></li>
+    </ul>
+  </div>
+<!-- ==== Home page ====== -->
+ <section>
+  <div class="banner">
+          <div class="slider">
+            <img src="./Img/test1_cropped.png" id="slideImg"/>
+          </div>
+
+  <div class="overlay">
+        <div class="content">
+          <div class="text-right">
+           
+            
+            <h1>EVER HEARD OF</h1>
+            <div class="text-icon">
+              <div class="right">
+                <img src="./Img/right_arow.png"/>
+              </div>
+              <div class="left">
+                <img src="./Img/left_arrow.png"/>
+              </div>
+          </div>
+          <br>
+            <h2><span>SOLUTION</span> AS A SERVICES??</h2>
+           
+            <button>LEARN MORE</button>
+           
+           
+           </div>
+        </div>
+    </div>
+  </div>
+ </section>
+ <!-- ===== JS ===== -->
+  <script>
+    var slideImg = document.getElementById("slideImg");
+    var images = new Array(
+       "./Img/test1_cropped.png",
+       './Img/MNSP_IMAGE.png',
+       "./Img/test1_cropped.png"
+       
+       
+    );
+    var len = images.length;
+    var i = 0
+    function slider (){
+      if(i> len-1){
+        i=0;
+      }
+      slideImg.src = images[i];
+        i++;
+        setTimeout('slider()',3000);
+    }
+  </script>
+<!-- === About us ====== -->
+
+  <section class="about">
+    <div class="main">
+       <img src="./Img/1.jpeg" class="img"/>
+       <div class="about-text">
+         <h3>About Me*</h3>
+         <h5>  Developer</h5>
+         <p> I am a front-end developer. I also make the website more & more intractive with web animations,</p>
+         
+       </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Me ===== -->
+ <div class="contact-me">
+   <p>Let Me Get You A Beautiful Website.</p>
+    <button>HERE ME</button>
+   </div>
+  
+</body>
+</html>
